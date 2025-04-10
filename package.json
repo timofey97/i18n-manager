@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/timofey97/i18n-manager#readme",
   "dependencies": {
-    "@google-cloud/translate": "^9.0.1",
+    "@vitalets/google-translate-api": "^9.2.0",
     "axios": "^1.6.7",
     "commander": "^11.1.0",
     "fastest-levenshtein": "^1.0.16"
