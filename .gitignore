@@ -45,8 +45,10 @@ free-translate-api/go.mod
 # Test files
 test-translate.js
 test-go-translate.js
+test-create-lang.js
 
 # Old translation files
 lib/utils/translate.js
 lib/utils/translate-with-proxy.js 
-test-create-lang.js
+
+test-check.js
