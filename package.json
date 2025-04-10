@@ -1,6 +1,6 @@
 {
   "name": "@msomsina/i18n-manager",
-  "version": "1.0.6",
+  "version": "1.0.8",
   "description": "A powerful i18n management tool for handling translations",
   "main": "index.js",
   "bin": {
@@ -10,6 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
+    "translation",
     "i18n",
     "translations",
     "localization",
@@ -27,21 +28,10 @@
   },
   "homepage": "https://github.com/timofey97/i18n-manager#readme",
   "dependencies": {
-    "@vitalets/google-translate-api": "^9.2.0",
+    "@vitalets/google-translate-api": "^9.2.1",
     "axios": "^1.6.7",
     "commander": "^11.1.0",
-    "fastest-levenshtein": "^1.0.16"
-  },
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "files": [
-    "bin",
-    "lib",
-    "README.md",
-    "LICENSE"
-  ],
-  "publishConfig": {
-    "access": "public"
+    "fastest-levenshtein": "^1.0.16",
+    "http-proxy-agent": "^7.0.2"
   }
 }
