@@ -32,6 +32,8 @@
     "axios": "^1.6.7",
     "commander": "^11.1.0",
     "fastest-levenshtein": "^1.0.16",
-    "http-proxy-agent": "^7.0.2"
+    "http-proxy-agent": "^7.0.2",
+    "is-port-reachable": "^4.0.0",
+    "cli-progress": "^3.12.0"
   }
 }
