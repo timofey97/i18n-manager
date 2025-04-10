@@ -49,3 +49,4 @@ test-go-translate.js
 # Old translation files
 lib/utils/translate.js
 lib/utils/translate-with-proxy.js 
+test-create-lang.js
