@@ -36,85 +36,56 @@ npx i18n-manager <command> [options]
 
 ### Commands
 
-#### Initialize Translations
+#### Create New Language
 
 ```bash
-i18n-manager init
-```
-
-This command creates a new translations directory with the following structure:
-```
-translations/
-├── en.json
-├── ru.json
-└── index.js
-```
-
-#### Add New Language
-
-```bash
-i18n-manager add <language-code>
+i18n-manager create <language-code> [--path <path>]
 ```
 
 Example:
 ```bash
-i18n-manager add fr
+# Using default path (src/assets/i18n)
+i18n-manager create fr
+
+# Using custom path
+i18n-manager create fr --path src/assets/i18n
 ```
 
 This will create a new translation file `fr.json` with the same structure as your base language file.
 
-#### Add New Key
+#### Sync Translations
 
 ```bash
-i18n-manager add-key <key> <value>
+i18n-manager sync [--path <path>]
 ```
 
 Example:
 ```bash
-i18n-manager add-key "welcome.message" "Welcome to our app!"
+# Using default path
+i18n-manager sync
+
+# Using custom path
+i18n-manager sync --path src/assets/i18n
 ```
 
-This will add the new key to all language files.
+This will sync all missing translations with the base language file.
 
-#### Update Key
+#### Check Translations
 
 ```bash
-i18n-manager update <key> <value>
+i18n-manager check [--path <path>]
 ```
 
 Example:
 ```bash
-i18n-manager update "welcome.message" "Welcome to our amazing app!"
+# Using default path
+i18n-manager check
+
+# Using custom path
+i18n-manager check --path src/assets/i18n
 ```
 
-This will update the key in all language files.
-
-#### Remove Key
-
-```bash
-i18n-manager remove <key>
-```
-
-Example:
-```bash
-i18n-manager remove "welcome.message"
-```
-
-This will remove the key from all language files.
-
-#### Custom Translations Directory
-
-You can specify a custom directory for your translations:
-
-```bash
-i18n-manager init --dir ./my-translations
-```
-
-All subsequent commands will use this directory:
-
-```bash
-i18n-manager add-key "welcome.message" "Welcome!" --dir ./my-translations
-```
+This will check for missing translations in all language files.
 
 ## License
 

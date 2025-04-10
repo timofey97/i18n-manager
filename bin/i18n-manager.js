@@ -12,25 +12,28 @@ program
   .option('-p, --path <path>', 'Path to translations directory', 'src/assets/i18n');
 
 program
-  .command('create')
-  .description('Create a new language file')
-  .argument('<langCode>', 'Two-letter language code (e.g., fr, pl, id)')
-  .action((langCode, options) => {
-    createLanguageFile(langCode, options.parent.path);
-  });
+	.command('create')
+	.description('Create a new language file')
+	.argument('<langCode>', 'Two-letter language code (e.g., fr, pl, id)')
+	.action((langCode, options) => {
+		const path = options.parent ? options.parent.path : 'src/assets/i18n';
+		createLanguageFile(langCode, path);
+	});
 
 program
-  .command('sync')
-  .description('Sync missing translations with base language')
-  .action((options) => {
-    syncTranslations(options.parent.path);
-  });
+	.command('sync')
+	.description('Sync missing translations with base language')
+	.action((options) => {
+		const path = options.parent ? options.parent.path : 'src/assets/i18n';
+		syncTranslations(path);
+	});
 
 program
-  .command('check')
-  .description('Check for missing translations')
-  .action((options) => {
-    checkTranslations(options.parent.path);
-  });
+	.command('check')
+	.description('Check for missing translations')
+	.action((options) => {
+		const path = options.parent ? options.parent.path : 'src/assets/i18n';
+		checkTranslations(path);
+	});
 
 program.parse(); 

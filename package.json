@@ -1,6 +1,6 @@
 {
   "name": "@msomsina/i18n-manager",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A powerful i18n management tool for handling translations",
   "main": "index.js",
   "bin": {
